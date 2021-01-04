@@ -40,7 +40,7 @@ def process():
 
     snake.move_head()
 
-    if (pygame.sprite.collide_rect(snake.head, apple)):
+    if pygame.sprite.collide_rect(snake.head, apple):
         allSprites.add(snake.grow())
         score += 1
         apple.newRandomPos()
@@ -55,13 +55,13 @@ while Running:
             Running = False
 
         if ev.type == pygame.KEYDOWN:
-            if ev.key == pygame.K_LEFT or ev.unicode == 'a':
+            if ev.key == pygame.K_LEFT or ev.unicode == "a":
                 snake.set_direction(LEFT)
-            if ev.key == pygame.K_RIGHT or ev.unicode == 'd':
+            if ev.key == pygame.K_RIGHT or ev.unicode == "d":
                 snake.set_direction(RIGHT)
-            if ev.key == pygame.K_UP or ev.unicode == 'w':
+            if ev.key == pygame.K_UP or ev.unicode == "w":
                 snake.set_direction(UP)
-            if ev.key == pygame.K_DOWN or ev.unicode == 's':
+            if ev.key == pygame.K_DOWN or ev.unicode == "s":
                 snake.set_direction(DOWN)
 
     CLOCK.tick(10 + score)
@@ -72,4 +72,4 @@ while Running:
     pygame.display.flip()
 
 pygame.quit()
-print('Score: ' + str(score))
+print("Score: " + str(score))

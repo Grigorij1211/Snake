@@ -8,6 +8,7 @@ safe_margin = 3
 max_x = screen_max_x // APPLE_WIDTH - safe_margin
 max_y = screen_max_y // APPLE_WIDTH - safe_margin
 
+
 class Apple(pygame.sprite.Sprite):
     def __init__(self, apple_img):
         pygame.sprite.Sprite.__init__(self)
