@@ -55,13 +55,13 @@ while Running:
             Running = False
 
         if ev.type == pygame.KEYDOWN:
-            if ev.key == pygame.K_LEFT or ev.unicode == "a":
+            if ev.key == pygame.K_LEFT or ev.key == pygame.K_a:
                 snake.set_direction(LEFT)
-            if ev.key == pygame.K_RIGHT or ev.unicode == "d":
+            if ev.key == pygame.K_RIGHT or ev.key == pygame.K_d:
                 snake.set_direction(RIGHT)
-            if ev.key == pygame.K_UP or ev.unicode == "w":
+            if ev.key == pygame.K_UP or ev.key == pygame.K_w:
                 snake.set_direction(UP)
-            if ev.key == pygame.K_DOWN or ev.unicode == "s":
+            if ev.key == pygame.K_DOWN or ev.key == pygame.K_s:
                 snake.set_direction(DOWN)
 
     CLOCK.tick(10 + score)
